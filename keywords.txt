@@ -1,0 +1,15 @@
+############################################
+# Syntax Coloring Map M5Stack Simple Servo Library
+############################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+M5StackSimpleServo	KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+attach			KEYWORD2
+write			KEYWORD2
+detach			KEYWORD2
