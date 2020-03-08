@@ -1,6 +1,8 @@
 # M5StackSimpleServo
 
-A library for controlling servo motor in M5Stack
+A library for controlling servo motor in M5Stack.
+
+This library has been tested on the M5Stack Gray.
 
 ## Quick Start
 
