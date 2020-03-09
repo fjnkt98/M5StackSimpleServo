@@ -21,7 +21,6 @@ void M5StackSimpleServo::write(int angle){
 
   uint32_t output = (uint32_t)((duty_max - duty_min) * angle / 180 + duty_min);
 
-  Serial.println(output);
   if (angle < 0) {
     ledcWrite(ledc_channel_, 0);
   } else if (angle > 180) {
