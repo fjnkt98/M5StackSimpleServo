@@ -16,18 +16,9 @@ void M5StackSimpleServo::attach(uint8_t output_pin){
 }
 
 void M5StackSimpleServo::write(int value){
-  int duty_min = (int)(65535 * pwm_min_width_ * ledc_freq_ / 1000);
-  int duty_max = (int)(65535 * pwm_max_width_ * ledc_freq_ / 1000);
+  uint32_t output = map(constrain(value, 0, 180), 0, 180, pwm_min_width_, pwm_max_width_);
 
-  uint32_t output = (uint32_t)((duty_max - duty_min) * value / 180 + duty_min);
-
-  if (value < 0) {
-    ledcWrite(ledc_channel_, 0);
-  } else if (value > 180) {
-    ledcWrite(ledc_channel_, 0);
-  } else {
-    ledcWrite(ledc_channel_, output);
-  }
+  this->writeMicroseconds(output);
 }
 
 void M5StackSimpleServo::writeMicroseconds(int value) {
