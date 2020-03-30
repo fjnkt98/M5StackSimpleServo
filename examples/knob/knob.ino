@@ -1,7 +1,7 @@
 #include <M5Stack.h>
 #include "m5stack_simple_servo.h"
 
-M5StackSimpleServo myservo(3, 1.0, 2.0);
+M5StackSimpleServo myservo(3, 500, 2400);
 
 void setup() {
   // hardware initialization
