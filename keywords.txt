@@ -10,6 +10,7 @@ M5StackSimpleServo	KEYWORD1
 #######################################
 # Methods and Functions (KEYWORD2)
 #######################################
-attach			KEYWORD2
-write			KEYWORD2
-detach			KEYWORD2
+attach			    KEYWORD2
+write			    KEYWORD2
+writeMicroseconds   KEYWORD2
+detach			    KEYWORD2
