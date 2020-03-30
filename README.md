@@ -42,8 +42,8 @@ A constructor that initializes the ledc configuration.
 ##### args
 
 - `ledc_channel`: Number of Channel to use.
-- `pwm_min_width`: Minimum duty ratio of the control pluse of servo motor. default is 0.5
-- `pwm_max_width`: Maximum duty ratio of the control pluse of servo motor. default is 2.4
+- `pwm_min_width`: Minimum duty ratio of the control pluse of servo motor. default is 500[us]
+- `pwm_max_width`: Maximum duty ratio of the control pluse of servo motor. default is 2400[us]
 - `ledc_freq`: PWM freqency. default is 50.0
 - `ledc_timer_bit`: Number of full scale bits for duty indication. default is 16
 
@@ -57,7 +57,7 @@ A function to assign a pin to the PWM channel.
 
 - `output_pin`: Number of GPIO to use.
 
-#### M5StackSimpleServo::write(int angle)
+#### M5StackSimpleServo::write(int value)
 
 ##### Description
 
@@ -65,7 +65,17 @@ A function to write signals to the servo motor.
 
 ##### arg
 
-- `angle`: the value to write to the servo motor, from 0 to 180
+- `value`: the value to write to the servo motor, from 0 to 180
+
+#### M5StackSimpleServo::writeMicroseconds(int value)
+
+##### Description
+
+A function to write signals to the servo motor in microseconds.
+
+##### arg
+
+- `value`: the value to write to the servo motor in microseconds.
 
 #### M5StackSimpleServo::detach
 
